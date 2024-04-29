@@ -1,0 +1,63 @@
+.currency-list-view{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 0 0 10px 10px; /* Top-left, Top-right, Bottom-right, Bottom-left */
+}
+
+.currency-list-view-title{
+    -fx-background-color:  #1565C0;
+    -fx-background-radius: 5px 5px 0 0; /* Top-left, Top-right, Bottom-right, Bottom-left */
+    -fx-font-size: 24px;
+}
+
+/*.currency-list-view-drop-shadow{
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.03), 10, 0, 0, 2);
+}*/
+
+
+/*
+
+.list-cell {
+    -fx-control-inner-background: white ;
+    -fx-control-inner-background-alt: derive(-fx-control-inner-background, 50%);
+}
+
+*/
+
+
+.list-cell {
+    -fx-background: white;
+    -fx-background-color: transparent;
+    -fx-text-fill: -fx-text-base-color;
+    -fx-padding: 10;
+    -fx-cell-size: 1.66667em;
+    -fx-background-radius: 10;
+    -fx-border-insets: 5px;/*for adding margin*/
+
+}
+
+.list-view .list-cell:filled:hover
+{
+    -fx-background-color: rgba(21, 101, 192, 0.3);
+    -fx-text-fill: -fx-text-inner-color;
+}
+
+/*.list-cell {
+    -fx-padding: 10px;
+    !*-fx-background-color: #f0f0f0;*!
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-margin-bottom: 10px; !* Add bottom margin *!
+}*/
+
+
+/*
+.list-cell:selected {
+    -fx-background-color: #b3d9ff; !* Background color when cell is selected *!
+    -fx-text-fill: black; !* Text color when cell is selected *!
+}
+
+.list-cell:hover {
+    -fx-background-color: #e6e6e6; !* Background color when cell is hovered *!
+}
+*/

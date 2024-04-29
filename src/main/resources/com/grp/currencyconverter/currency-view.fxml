@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox fx:id="ParentComponent" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="593.0" prefWidth="927.0" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.grp.currencyconverter.contoller.CCController">
+   <children>
+      <BorderPane prefHeight="538.0" prefWidth="881.0">
+         <center>
+            <VBox fx:id="mainVBoxComponent" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="519.0" prefWidth="661.0" styleClass="main-vbox">
+               <children>
+                  <HBox alignment="CENTER_LEFT" cache="true" prefHeight="74.0" prefWidth="600.0" spacing="300.0" stylesheets="@../../../style.css">
+                     <children>
+                        <Text id="exchangeRate" strokeType="OUTSIDE" strokeWidth="0.0" text="Exchange Rate Today" wrappingWidth="241.13671875">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="149.0" prefWidth="600.0" spacing="20.0">
+                     <children>
+                        <VBox fx:id="amountVBox" alignment="CENTER" prefHeight="150.0" prefWidth="205.0">
+                           <children>
+                              <VBox fx:id="innerAmountVBox" alignment="CENTER_LEFT" prefHeight="49.0" prefWidth="173.0">
+                                 <children>
+                                    <Label styleClass="text" text="Amount">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <TextField fx:id="amount" prefHeight="60.0" prefWidth="205.0" styleClass="input" />
+                           </children>
+                        </VBox>
+                        <VBox fx:id="fromVBox" alignment="CENTER" prefHeight="150.0" prefWidth="205.0">
+                           <children>
+                              <VBox fx:id="innerFromVBox" alignment="CENTER_LEFT" prefHeight="49.0" prefWidth="173.0">
+                                 <children>
+                                    <Label styleClass="text" text="From">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <ComboBox fx:id="from" onAction="#fromFunction" prefHeight="29.0" prefWidth="195.0" promptText="Currency">
+                                 <styleClass>
+                                    <String fx:value="input" />
+                                    <String fx:value="my-combo-box1" />
+                                    <String fx:value="combo-box-popup" />
+                                 </styleClass>
+                              </ComboBox>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="toVBox" alignment="CENTER" prefHeight="150.0" prefWidth="205.0">
+                           <children>
+                              <VBox fx:id="innerToVBox" alignment="CENTER_LEFT" prefHeight="49.0" prefWidth="173.0">
+                                 <children>
+                                    <Label styleClass="text" text="To">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <ComboBox fx:id="to" onAction="#toFunction" prefHeight="29.0" prefWidth="195.0" promptText="Currency">
+                                 <styleClass>
+                                    <String fx:value="input" />
+                                    <String fx:value="my-combo-box2" />
+                                    <String fx:value="combo-box-popup" />
+                                 </styleClass>
+                              </ComboBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </HBox>
+                  <VBox prefHeight="145.0" prefWidth="661.0" spacing="30.0">
+                     <children>
+                        <Button fx:id="convert" mnemonicParsing="false" onAction="#convert" prefHeight="41.0" prefWidth="659.0" styleClass="material-button" text="Convert">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Button>
+                        <HBox alignment="CENTER_LEFT" prefHeight="47.0" prefWidth="651.0" spacing="20.0">
+                           <children>
+                              <Label fx:id="current_amount_label" styleClass="current-amount-text" text="Current Amount" />
+                              <Text fx:id="current_amount" fill="#007bff" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="amount-text" text="NGN 000000">
+                                 <font>
+                                    <Font size="35.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT">
+                           <children>
+                              <Text fx:id="current_info" fill="#7c7c7c" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="info-text" wrappingWidth="620.51953125" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </VBox>
+                  <HBox alignment="TOP_CENTER">
+                     <children>
+                        <Text text="Developed by GRP-5" wrappingWidth="184.0">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+         <left>
+            <VBox fillWidth="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="464.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" fillHeight="false" prefHeight="63.0" prefWidth="200.0" stylesheets="@../../../listview.style.css">
+                     <children>
+                        <Text id="currency-view-text" fill="WHITE" styleClass="currency-view-text" text="Currency Rates" wrappingWidth="160.0" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="currency-list-view-title" />
+                        <String fx:value="currency-list-view-drop-shadow" />
+                     </styleClass>
+                  </HBox>
+                  <ListView fx:id="currencyRateList" prefHeight="477.0" prefWidth="200.0" styleClass="currency-list-view" stylesheets="@../../../listview.style.css" />
+               </children>
+               <BorderPane.margin>
+                  <Insets right="20.0" />
+               </BorderPane.margin>
+            </VBox>
+         </left>
+         <VBox.margin>
+            <Insets right="10.0" />
+         </VBox.margin>
+      </BorderPane>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
